@@ -1,6 +1,6 @@
 public class test {
     public static void main(String[] args) {
-        Patient myPatient = new Patient("1", "2", "3", "4", "5", Patient.Insurance.PRIVATE, 7, Patient.Patient_type.ADULT);
+        Patient myPatient = new Patient("1", "2", "3", "4", "5", Patient.Insurance.Private, 7, Patient.Patient_type.Adult);
 
         String last_name = myPatient.getLastName();
         String first_name = myPatient.getFirstName();
@@ -12,16 +12,16 @@ public class test {
         Patient.Patient_type patient_type = myPatient.getPatientType();
 
         System.out.println("=======Initial========");
-        System.out.println(last_name+ "\t" + first_name + "\t" + address + "\t" + phone_number + "\t" + DOB + "\t" + insurance_type + "\t" + copay + "\t" + patient_type);
+        System.out.println(last_name+ "\t" + first_name + "\t" + address + "\t" + phone_number + "\t" + DOB + "\t" + insurance_type + "\t\t" + copay + "\t" + patient_type);
 
         myPatient.updateLastName("no");
         myPatient.updateFirstName("no");
         myPatient.updateAddress("no");
         myPatient.updatePhoneNumber("no");
         myPatient.updateDOB("no");
-        myPatient.updateInsuranceType(Patient.Insurance.GOVERNMENT);
+        myPatient.updateInsuranceType(Patient.Insurance.Government);
         myPatient.updateCopay(0);
-        myPatient.updatePatientType(Patient.Patient_type.PEDIATRIC);
+        myPatient.updatePatientType(Patient.Patient_type.Pediatric);
 
         last_name = myPatient.getLastName();
         first_name = myPatient.getFirstName();

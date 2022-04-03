@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Patient {
     enum Insurance {
-        PRIVATE,
-        GOVERNMENT
+        Private,
+        Government
     }
     enum Patient_type {
-        PEDIATRIC,
-        ADULT,
-        GERIATRIC
+        Pediatric,
+        Adult,
+        Geriatric
     }
     private String last_name;
     private String first_name;
@@ -30,28 +30,6 @@ public class Patient {
 //        this.copay = 0;
 //        this.patient_type = "N/A";
 //    }
-
-    public String get_type() {
-        switch(insurance_type) {
-            case PRIVATE:
-                return "Private";
-            case GOVERNMENT:
-                return "Government";
-            default:
-                return "Invalid type"
-        }
-    }
-
-    public String get_type() {
-        switch(insurance_type) {
-            case PRIVATE:
-                return "Private";
-            case GOVERNMENT:
-                return "Government";
-            default:
-                return "Invalid type"
-        }
-    }
 
     //constructor
     public Patient(String init_ln, String init_fn, String init_address, String init_phone_number, String init_DOB, Insurance init_insurance_type, float init_copay, Patient_type init_patient_type) {
@@ -85,10 +63,25 @@ public class Patient {
 
 }
 class MedicalConditions {
+    enum Allergy_type {
+        Food,
+        Medication,
+        Seasonal,
+        None,
+        Other
+    }
+
+    enum Illness_type {
+        Diabetes,
+        CHD,
+        Asthma,
+        None,
+        Other
+    }
     private String physician;
     private String phys_phone_number;
-    private String allergies;
-    private String illness;
+    private Allergy_type allergies;
+    private Illness_type illness;
 
 //    //Default constructor
 //    public MedicalConditions() {
@@ -99,7 +92,7 @@ class MedicalConditions {
 //    }
 
     //constructor
-    public MedicalConditions(String init_physician, String init_phys_phone_number, String init_allergies, String init_illness) {
+    public MedicalConditions(String init_physician, String init_phys_phone_number, Allergy_type init_allergies, Illness_type init_illness) {
         this.physician = init_physician;
         this.phys_phone_number = init_phys_phone_number;
         this.allergies = init_allergies;

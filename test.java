@@ -1,6 +1,6 @@
 public class test {
     public static void main(String[] args) {
-        Patient myPatient = new Patient("1", "2", "3", "4", "5", Patient.Insurance.Private, 7, Patient.Patient_type.Adult);
+        Patient myPatient = new Patient("1", "2", "3", "4", "5", Patient.Insurance.PRIVATE, 7, Patient.Patient_type.ADULT);
 
         String last_name = myPatient.getLastName();
         String first_name = myPatient.getFirstName();
@@ -19,9 +19,9 @@ public class test {
         myPatient.updateAddress("no");
         myPatient.updatePhoneNumber("no");
         myPatient.updateDOB("no");
-        myPatient.updateInsuranceType(Patient.Insurance.Government);
+        myPatient.updateInsuranceType(Patient.Insurance.GOVERNMENT);
         myPatient.updateCopay(0);
-        myPatient.updatePatientType(Patient.Patient_type.Pediatric);
+        myPatient.updatePatientType(Patient.Patient_type.PEDIATRIC);
 
         last_name = myPatient.getLastName();
         first_name = myPatient.getFirstName();

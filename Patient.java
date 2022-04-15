@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class Patient {
     enum Insurance {
-        Private,
-        Government
+        PRIVATE,
+        GOVERNMENT
     }
     enum Patient_type {
-        Pediatric,
-        Adult,
-        Geriatric
+        PEDIATRIC,
+        ADULT,
+        GERIATRIC
     }
     private String last_name;
     private String first_name;
@@ -16,8 +16,10 @@ public class Patient {
     private String phone_number;
     private String DOB;
     private Insurance insurance_type;
+    private String insurance_t;
     private float copay;
     private Patient_type patient_type;
+    private String patient_t;
 
     //Default constructor
 //    public Patient() {
@@ -32,15 +34,15 @@ public class Patient {
 //    }
 
     //constructor
-    public Patient(String init_ln, String init_fn, String init_address, String init_phone_number, String init_DOB, Insurance init_insurance_type, float init_copay, Patient_type init_patient_type) {
-        this.last_name = init_ln;
-        this.first_name = init_fn;
-        this.address = init_address;
-        this.phone_number = init_phone_number;
-        this.DOB = init_DOB;
-        this.insurance_type = init_insurance_type;
-        this.copay = init_copay;
-        this.patient_type = init_patient_type;
+    public Patient(String ln, String fn, String address, String phone_number, String DOB, Insurance insurance_type, float copay, Patient_type patient_type) {
+        this.last_name = ln;
+        this.first_name = fn;
+        this.address = address;
+        this.phone_number = phone_number;
+        this.DOB = DOB;
+        this.insurance_type = insurance_type;
+        this.copay = copay;
+        this.patient_type = patient_type;
     }
 
     public String getLastName() {return this.last_name;}
@@ -61,41 +63,4 @@ public class Patient {
     public void updateCopay(float cpay) {this.copay = cpay;}
     public void updatePatientType(Patient_type p_type) {this.patient_type = p_type;}
 
-}
-class MedicalConditions {
-    enum Allergy_type {
-        Food,
-        Medication,
-        Seasonal,
-        None,
-        Other
-    }
-
-    enum Illness_type {
-        Diabetes,
-        CHD,
-        Asthma,
-        None,
-        Other
-    }
-    private String physician;
-    private String phys_phone_number;
-    private Allergy_type allergies;
-    private Illness_type illness;
-
-//    //Default constructor
-//    public MedicalConditions() {
-//        this.physician = "N/A";
-//        this.phys_phone_number = "N/A";
-//        this.allergies = "N/A";
-//        this.illness = "N/A";
-//    }
-
-    //constructor
-    public MedicalConditions(String init_physician, String init_phys_phone_number, Allergy_type init_allergies, Illness_type init_illness) {
-        this.physician = init_physician;
-        this.phys_phone_number = init_phys_phone_number;
-        this.allergies = init_allergies;
-        this.illness = init_illness;
-    }
 }
